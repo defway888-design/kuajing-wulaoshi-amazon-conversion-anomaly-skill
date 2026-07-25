@@ -1,8 +1,7 @@
 interface:
   display_name: "跨境吴老师亚马逊转化率异动分析"
-  short_description: "诊断亚马逊转化率异动，核查价格、促销、购物车、竞品与口碑证据。"
-  default_prompt: "使用 $kuajing-wulaoshi-amazon-conversion-anomaly 分析指定站点和 ASIN 的转化率异动原因，并输出可核查证据。"
+  short_description: "按固定竞品与数据源规则诊断亚马逊转化率异动。"
+  default_prompt: "使用 $kuajing-wulaoshi-amazon-conversion-anomaly 分析指定站点和 ASIN 的转化率异动，按固定规则生成竞品并输出可核查证据，不提供优化建议。"
 
 policy:
   allow_implicit_invocation: true
-
