@@ -13,6 +13,9 @@ Skill会先从目标商品最细叶子类目 BSR 1—100中筛选相似商品，
 
 最终输出可复核的时间证据、数据状态和方向判断。多个证据组同时成立时输出复合影响，不强制给出唯一原因，默认不提供优化建议。
 
+当前版本：`2.0.2`  
+更新日期：`2026-07-28`
+
 启动示例：
 
 ```text
@@ -76,7 +79,54 @@ https://github.com/defway888-design/kuajing-wulaoshi-amazon-conversion-anomaly-s
 
 安装完成后，关闭并重新打开 Codex，使 Skill生效。
 
-## 三、运行前准备
+## 三、版本更新
+
+### 当前版本更新内容
+
+`2.0.2`：
+
+- 在Skill介绍中增加当前版本、版本记录、更新方法和更新失败处理。
+- 不修改竞品筛选、价格促销、评分评论、时间证据和归因判断等业务逻辑。
+
+近期版本记录：
+
+- `2.0.1`：将技术编号改为清晰业务标题；删除本地卖家精灵数据库Skill依赖和固定MCP命名空间限制。
+- `2.0.0`：按最终确认的业务规则重构竞品生成、近30天预测销量、价格促销、评分评论和证据归因流程。
+- `1.0.0`：首次发布。
+
+### 已安装用户如何更新
+
+1. 确认当前 GitHub账号仍可访问私有仓库。
+2. 打开 Codex并新建一个对话。
+3. 输入：
+
+```text
+请从以下 GitHub私有仓库更新跨境吴老师亚马逊转化率异动分析 Skill：
+https://github.com/defway888-design/kuajing-wulaoshi-amazon-conversion-anomaly-skill
+
+目标版本：2.0.2
+请覆盖当前已安装的旧版本，并在完成后告诉我实际安装路径和版本号。
+```
+
+4. 按照 Codex提示完成 GitHub授权。
+5. 更新完成后关闭并重新打开 Codex。
+6. 重新打开后可以输入以下指令核验：
+
+```text
+请读取当前安装的跨境吴老师亚马逊转化率异动分析 Skill，
+告诉我 template_manifest.json 中的 version。
+```
+
+返回`2.0.2`表示更新成功。
+
+### 更新失败时
+
+- GitHub下载或授权失败时，不要覆盖当前可用版本；确认私有仓库访问权限后重新更新。
+- 更新后仍显示旧版本时，先让 Codex报告实际安装路径和`template_manifest.json`版本，确认是否读取了旧目录。
+- 本Skill已经包含完整业务和MCP路由，不需要额外安装卖家精灵数据库Skill。
+- 不要在对话中发送 GitHub密码、Token、Cookie或其他凭证。
+
+## 四、运行前准备
 
 当前 Codex环境需要配置：
 
@@ -87,7 +137,7 @@ https://github.com/defway888-design/kuajing-wulaoshi-amazon-conversion-anomaly-s
 
 同一种数据只使用一个固定 MCP来源。字段缺失或调用失败时输出数据不足，不调用其他 MCP补数。
 
-## 四、执行结果
+## 五、执行结果
 
 执行后会得到：
 
@@ -101,7 +151,7 @@ https://github.com/defway888-design/kuajing-wulaoshi-amazon-conversion-anomaly-s
 
 Deals不持续监控，只在转化率异动发生后按需读取；已有同源、同站点、同 ASIN、同时间窗口数据时复用。
 
-## 五、仓库文件
+## 六、仓库文件
 
 - `SKILL.md`：Skill入口、数据源边界、执行流程和输出合同。
 - `agents/openai.yaml`：Codex展示名称和默认提示词。
