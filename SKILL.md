@@ -27,10 +27,10 @@ description: 跨境吴老师亚马逊商品转化率异动诊断 Skill。用于 
 
 正式执行前完整读取：
 
-- `references/business-rules.md`：C01—C28业务规则、因素判断、时间可信度和归因规则。
+- `references/business-rules.md`：竞品筛选、价格促销、口碑变化、时间证据和归因判断的完整规则。
 - `references/mcp-routing.md`：固定 MCP 工具、字段、调用顺序、缓存、分页与失败处理。
 
-调用卖家精灵 MCP 前，还必须读取当前环境中的 `$kuajing-wulaoshi-sellersprite-mcp-database`。不得只凭本文件执行正式分析。
+不得只凭本文件执行正式分析。当前 Skill 已包含所需卖家精灵工具和字段规则，不依赖其他本地 Skill。
 
 ## 输入合同
 

@@ -82,7 +82,6 @@ https://github.com/defway888-design/kuajing-wulaoshi-amazon-conversion-anomaly-s
 
 - 领星 MCP：提供当前店铺、站点、自有 Seller ID、当前父子商品关系，以及上游自有转化率口径。
 - 卖家精灵 MCP：提供竞品池、当前商品内容、预测销量、价格促销、评分和评论数据。
-- 跨境吴老师卖家精灵 MCP数据库说明 Skill：在调用卖家精灵前核对工具和字段。
 
 运行时至少提供站点、ASIN、异常期和转化率上涨/下降方向。同站点存在多个店铺且异常记录无法确定店铺时，还需要指定店铺。
 
@@ -106,6 +105,6 @@ Deals不持续监控，只在转化率异动发生后按需读取；已有同源
 
 - `SKILL.md`：Skill入口、数据源边界、执行流程和输出合同。
 - `agents/openai.yaml`：Codex展示名称和默认提示词。
-- `references/business-rules.md`：C01—C28完整业务规则。
+- `references/business-rules.md`：竞品筛选、价格促销、评分评论、时间证据和归因判断规则。
 - `references/mcp-routing.md`：MCP工具、字段、调用顺序、缓存和错误处理。
 - `template_manifest.json`：跨境吴老师品牌与版本信息。
