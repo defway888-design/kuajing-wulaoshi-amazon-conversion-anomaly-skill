@@ -1,7 +1,7 @@
 interface:
   display_name: "跨境吴老师亚马逊转化率异动分析"
-  short_description: "核查标题、Prime、价格促销和口碑的转化率异动证据。"
-  default_prompt: "使用 $kuajing-wulaoshi-amazon-conversion-anomaly 分析指定站点和 ASIN 的转化率异动，按固定规则生成竞品，并用西柚核查自身及竞品标题修改与Prime价格，输出可核查证据，不提供优化建议。"
+  short_description: "拆解重点子体贡献并输出同源转化率诊断证据。"
+  default_prompt: "使用 $kuajing-wulaoshi-amazon-conversion-anomaly 分析指定站点和父 ASIN 的转化率异动，先拆解父子贡献并选择累计绝对贡献80%、最多5个重点子体，再核查竞品、标题、价格促销和口碑，输出同源结构化证据，不提供行动建议。"
 
 policy:
   allow_implicit_invocation: true
